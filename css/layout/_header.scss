@@ -1,0 +1,67 @@
+@import '../config/variables';
+
+/* header */
+header {
+  background: var(--intro-bg-clr);
+  padding: 2.5rem 0;
+  z-index: 20;
+  transition: all 250ms ease-in;
+
+  .container  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo-inversed  {
+    display: none;
+  }
+}
+.header-scrolled {
+  position: fixed;
+  background: var(--white-clr);
+  width: 100%;
+  padding: 0;
+  box-shadow: 1px 1px 18px 0px hsla(218, 28%, 13%, 0.15);
+  a {
+    color: var(--intro-bg-clr);
+  }
+}
+
+.header-scrolled .logo-original  {
+  display: none;
+}
+.header-scrolled .logo-inversed   {
+  display: block;
+  margin: .5rem;
+}
+
+.logo img {
+    width: 80px;
+}
+nav {
+  ul {
+    display: flex;
+  }
+  li {
+    margin-left: 1rem;
+  }
+  a {
+    font-family:var(--ff-heading);
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -.25rem;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: var(--white-clr);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: all 250ms ease-in;
+    }
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '../config/variables';
+
+/* footer */
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  font-size: 0.75rem;
+}
+footer a {
+  background: linear-gradient(45deg, var(--cyan-clr), var(--blue-clr));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+footer a:hover {
+  text-decoration: underline;
+  background: linear-gradient(125deg, var(--white-clr),var(--cyan-clr));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.attribution p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}

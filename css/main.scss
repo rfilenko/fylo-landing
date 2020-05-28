@@ -1,0 +1,14 @@
+@import 'config/variables';
+@import "config/base";
+
+@import "layout/header";
+
+//sections
+@import "layout/intro";
+@import "layout/about";
+@import "layout/features";
+@import "layout/sign-in";
+
+@import "layout/footer";
+
+@import "layout/mediaqueries";

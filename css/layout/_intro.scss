@@ -1,0 +1,30 @@
+@import '../config/variables';
+
+/* intro section */
+.intro {
+  padding: 2rem 0;
+  text-align: center;
+  background: var(--intro-bg-clr);
+}
+.intro .container {
+  max-width: 85ch;
+  margin: 0 auto; 
+}
+.intro img {
+    margin-bottom: 2rem;
+}
+.intro__text {
+  z-index: 10;
+}
+.title {
+  font-weight: var(--fw-semiBold);
+  font-family: var(--ff-body);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.subtitle {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-weight: var(--fw-regular);
+}
