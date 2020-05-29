@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fylo landing page, with dark theme, a Frontendmentor challenge">
+  <meta name="theme-color" content="hsl(218, 28%, 13%)">
   <link rel="shortcut icon" type="image/png" href="imgs/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
     rel="stylesheet">
   <title>Fylo landing page</title>
@@ -107,7 +110,9 @@
       <p class="sign-in__text">It only takes a minute to sign up and our free starter tier is extremely generous. If
         you have any questions, our support team would be happy to help you.</p>
       <form class="flex flex-column">
-        <input aria-labelledby="fnamelabel" type="text" id="email" placeholder="email@example.com">
+        <label for="email">Enter your email
+          <input type="text" id="email" placeholder="email@example.com">
+        </label>
         <input class="btn" type="submit" value="Get Started For Free">
       </form>
       </div>

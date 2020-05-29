@@ -12,7 +12,7 @@ Just for practice and fun.
 
 - HTML
 - CSS GRID for layout
-- CSS variables
+- scss with css variables
 
 
 ## My profile at FrontendMentor
