@@ -41,6 +41,10 @@
       flex-basis: 30%;
     }
   }
+  .footer-links ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 // mobile
 @media (max-width: 575px) {

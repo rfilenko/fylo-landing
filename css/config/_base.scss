@@ -17,6 +17,9 @@ body {
   background: var(--primary-clr);
   min-height: 100vh;
 }
+main {
+  z-index: 10;
+}
 img {
   display: block;
   border-style: none;
