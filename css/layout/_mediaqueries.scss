@@ -26,7 +26,9 @@
   }
   .sign-in {
     max-width: 85ch;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+
     form {
       width: 100%;
       flex-direction: row;
@@ -41,11 +43,37 @@
       flex-basis: 30%;
     }
   }
-  .footer-links ul {
-    flex-direction: row;
-    justify-content: space-between;
+  footer {
+    .footer-grid {
+      grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    }
+    .logo-info {
+      grid-column: 1 / span 2;
+    }
+    .contacts {
+      grid-column: 3;
+      margin: 0;
+    }
+    .footer-links {
+      grid-row: 2;
+      grid-column: 1 / span 2;
+      nav {
+        display: flex;
+        justify-content: flex-start;
+      }
+      ul {
+        flex-basis: 35%;
+      }
+    }
+    // .logo-info p {
+    //   max-width: 40ch;
+    // }
+    .attribution {
+      grid-column: 1 / -1;
+    }
   }
 }
+
 // mobile
 @media (max-width: 575px) {
   .title {

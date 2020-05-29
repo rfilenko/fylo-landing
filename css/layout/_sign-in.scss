@@ -3,11 +3,10 @@
 /* sign-in section */
 .sign-in {
   background: var(--intro-bg-clr);
-  padding: 3rem 1.5rem;
-  margin: 0 1rem;
   border-radius: .5rem;
   box-shadow: 3px 3px 8px 0px var(--primary-clr-shadow);
-  margin-bottom: -13rem;
+  margin: 0 1rem -13rem;
+  padding: 3rem 1.5rem;
 }
 form {
   width: 100%;
