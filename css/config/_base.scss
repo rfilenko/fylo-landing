@@ -33,6 +33,7 @@ h2 {
   margin-bottom: 1rem;
 }
 p {
+  font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
@@ -75,7 +76,7 @@ ul {
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 /* grid */
 .grid {
@@ -94,4 +95,11 @@ ul {
   border-radius: 2rem;
   color: var(--white-clr);
   font-size: 1.25rem;
+  box-shadow: 4px 6px 17px -4px rgba(0, 0, 0, 0.15);
+  transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  &:hover, &:focus {
+    box-shadow: 4px 6px 22px -4px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(0deg, var(--blue-clr),var(--cyan-clr));
+  }
 }
