@@ -1,0 +1,54 @@
+@import '../config/variables';
+
+/* testimonials section */
+.testimonials {
+  padding: 4rem 0;
+  .container {
+    padding: 0 1rem;
+  }
+  .grid {
+    gap: 2rem;
+  }
+  &__item {
+    position: relative;
+    background: var(--dark-blue-clr);
+    border-radius: .5rem;
+    box-shadow: 4px 6px 13px -4px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    padding: 2rem 1.5rem;
+
+    &:first-of-type {
+      &:before {
+        content: '';
+        position: absolute;
+        background: url(../imgs/bg-quotes.png) no-repeat;
+        height: 3.5rem;
+        width: 3.5rem;
+        top: -2rem;
+        left: -0.5rem;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    margin-top: 2rem;
+    img {
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 100%;
+    }
+    cite {
+      flex-basis: 100%;
+      h3, p {
+        font-size: .85rem;
+        font-style: normal;
+        margin-bottom: 0;
+      }
+    }
+    > div {
+      padding-left: 1rem;
+    }
+  }
+}

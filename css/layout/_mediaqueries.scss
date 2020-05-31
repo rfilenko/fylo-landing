@@ -65,15 +65,23 @@
         flex-basis: 35%;
       }
     }
-    // .logo-info p {
-    //   max-width: 40ch;
-    // }
     .attribution {
       grid-column: 1 / -1;
     }
   }
 }
-
+// small desktop
+@media (min-width:1024px) {
+  .testimonials {
+    .container {
+      padding: 0 2rem;
+    }
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+}
 // mobile
 @media (max-width: 575px) {
   h2 {

@@ -68,7 +68,7 @@ h2 {
   margin-bottom: 1rem;
 }
 
-p {
+p, blockquote {
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
@@ -500,6 +500,83 @@ nav a:hover:after {
   --ff-heading: Raleway, sans-serif;
 }
 
+/* testimonials section */
+.testimonials {
+  padding: 4rem 0;
+}
+
+.testimonials .container {
+  padding: 0 1rem;
+}
+
+.testimonials .grid {
+  gap: 2rem;
+}
+
+.testimonials__item {
+  position: relative;
+  background: var(--dark-blue-clr);
+  border-radius: .5rem;
+  -webkit-box-shadow: 4px 6px 13px -4px rgba(0, 0, 0, 0.15);
+          box-shadow: 4px 6px 13px -4px rgba(0, 0, 0, 0.15);
+  margin: 0;
+  padding: 2rem 1.5rem;
+}
+
+.testimonials__item:first-of-type:before {
+  content: '';
+  position: absolute;
+  background: url(../imgs/bg-quotes.png) no-repeat;
+  height: 3.5rem;
+  width: 3.5rem;
+  top: -2rem;
+  left: -0.5rem;
+  z-index: -1;
+}
+
+.testimonials__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.testimonials__info img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+}
+
+.testimonials__info cite {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.testimonials__info cite h3, .testimonials__info cite p {
+  font-size: .85rem;
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+.testimonials__info > div {
+  padding-left: 1rem;
+}
+
+:root {
+  --primary-clr: #181f2a;
+  --primary-clr-shadow: rgba(24, 31, 42, 0.75);
+  --footer-clr: #0b1523;
+  --intro-bg-clr: #1c2431;
+  --dark-blue-clr: #202a3c;
+  --white-clr: white;
+  --cyan-clr: #65e2d9;
+  --blue-clr: #339ecc;
+  --fw-regular: 400;
+  --fw-semiBold: 700;
+  --ff-body: Open Sans, sans-serif;
+  --ff-heading: Raleway, sans-serif;
+}
+
 /* sign-in section */
 .sign-in {
   background: var(--intro-bg-clr);
@@ -552,22 +629,22 @@ label[for="email"] {
 }
 
 /* footer */
-footer {
+.footer {
   margin-top: auto;
   padding: 17rem 1rem 2rem;
   background: var(--footer-clr);
 }
 
-footer a:hover, footer a:focus {
+.footer a:hover, .footer a:focus {
   color: var(--blue-clr);
 }
 
-footer a:hover svg path, footer a:focus svg path {
+.footer a:hover svg path, .footer a:focus svg path {
   fill: url(#fancyGradient);
   fill: var(--cyan-clr);
 }
 
-footer a::after {
+.footer a::after {
   background: var(--blue-clr);
 }
 
@@ -818,6 +895,17 @@ svg {
   }
   footer .attribution {
     grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonials .container {
+    padding: 0 2rem;
+  }
+  .testimonials .grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }
 
