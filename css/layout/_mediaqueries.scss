@@ -8,7 +8,7 @@
   nav li {
     margin-left: 2rem;
   }
-  .title {
+  .title, .section__title {
     font-size: 2.25rem;
     line-height: 1.7;
   }
@@ -19,6 +19,17 @@
     z-index: -1;
     background-size: contain;
   }
+  .about {
+    .grid {
+      > div {
+        align-self: center;
+      }
+    }
+    .section__title {
+      max-width: 20ch;
+      line-height: 1.35;
+    }
+  }
   .grid {
     grid-template-columns: repeat(2, minmax(10em, 1fr));
     gap: 5rem;
@@ -27,6 +38,9 @@
     max-width: 85ch;
     margin-left: auto;
     margin-right: auto;
+    p {
+      text-align: center;
+    }
 
     form {
       width: 100%;
@@ -113,6 +127,11 @@
 @media (min-width: 1200px) {
   .container {
     padding: 0;
+  } 
+  .sign-in {
+    max-width: 105ch;
+    padding: 3rem 5rem;
+    margin-bottom: -9rem;
   }
   footer {
     .footer-grid {

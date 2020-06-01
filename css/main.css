@@ -693,7 +693,7 @@ svg {
   nav li {
     margin-left: 2rem;
   }
-  .title {
+  .title, .section__title {
     font-size: 2.25rem;
     line-height: 1.7;
   }
@@ -704,6 +704,15 @@ svg {
     z-index: -1;
     background-size: contain;
   }
+  .about .grid > div {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .about .section__title {
+    max-width: 20ch;
+    line-height: 1.35;
+  }
   .grid {
     -ms-grid-columns: (minmax(10em, 1fr))[2];
         grid-template-columns: repeat(2, minmax(10em, 1fr));
@@ -713,6 +722,9 @@ svg {
     max-width: 85ch;
     margin-left: auto;
     margin-right: auto;
+  }
+  .sign-in p {
+    text-align: center;
   }
   .sign-in form {
     width: 100%;
@@ -815,6 +827,11 @@ svg {
 @media (min-width: 1200px) {
   .container {
     padding: 0;
+  }
+  .sign-in {
+    max-width: 105ch;
+    padding: 3rem 5rem;
+    margin-bottom: -9rem;
   }
   footer .footer-grid {
     max-width: 1200px;
