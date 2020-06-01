@@ -441,6 +441,7 @@ nav a:hover:after {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+  z-index: -1;
 }
 
 .feature__item {
@@ -720,6 +721,11 @@ svg {
 .social a:focus svg path,
 .social a:hover svg path {
   fill: url(#fancyGradient);
+}
+
+.contacts a:hover .email-icon path.inside,
+.contacts a:focus .email-icon path.inside {
+  fill: var(--footer-clr);
 }
 
 .contacts {

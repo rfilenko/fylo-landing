@@ -73,7 +73,10 @@ svg {
 .social a:hover svg path {
   fill: url(#fancyGradient);
 }
-
+.contacts a:hover .email-icon path.inside,
+.contacts a:focus .email-icon path.inside {
+  fill: var(--footer-clr);
+}
 .contacts {
   margin-top: -2rem;
   a {
