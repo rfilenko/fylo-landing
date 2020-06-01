@@ -302,6 +302,7 @@ nav a:hover:after {
 
 .intro img {
   margin-bottom: 2rem;
+  z-index: 10;
 }
 
 .intro__text {
@@ -432,13 +433,13 @@ nav a:hover:after {
 .features::before {
   content: '';
   position: absolute;
-  top: -20vh;
+  top: -18vh;
   left: 0;
   width: 100%;
   height: 15em;
   background-image: url(../imgs/bg-curvy-mobile.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: top center;
 }
 
@@ -502,7 +503,7 @@ nav a:hover:after {
 
 /* testimonials section */
 .testimonials {
-  padding: 4rem 0;
+  padding: 4rem 0 8rem;
 }
 
 .testimonials .container {
@@ -653,10 +654,10 @@ label[for="email"] {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 3rem;
 }
 
-.footer-grid div {
+.footer-grid > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -676,16 +677,17 @@ label[for="email"] {
   margin-bottom: 2rem;
 }
 
-.logo-info p {
+.logo-info div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.logo-info p svg {
+.logo-info span {
+  padding-top: .5rem;
+}
+
+.logo-info svg {
   margin-right: 1rem;
 }
 
@@ -827,6 +829,7 @@ svg {
     height: 30em;
     background-image: url(../imgs/bg-curvy-desktop.svg);
     z-index: -1;
+    background-size: contain;
   }
   .grid {
     -ms-grid-columns: (minmax(10em, 1fr))[2];
@@ -869,6 +872,9 @@ svg {
     -ms-grid-column-span: 2;
     grid-column: 1 / span 2;
   }
+  footer .logo-info p {
+    margin-bottom: 0;
+  }
   footer .contacts {
     -ms-grid-column: 3;
     grid-column: 3;
@@ -899,6 +905,18 @@ svg {
 }
 
 @media (min-width: 1024px) {
+  .features::before {
+    top: -55vh;
+    background-position-x: 55%;
+    min-height: 40em;
+    background-size: cover;
+  }
+  .grid {
+    gap: 4rem 0rem;
+  }
+  .about .grid {
+    gap: 6rem;
+  }
   .testimonials .container {
     padding: 0 2rem;
   }
@@ -907,9 +925,65 @@ svg {
         grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
+  footer .footer-links {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+  footer .footer-links nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0;
+  }
+  footer .footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    -ms-grid-columns: minmax(15rem, 1fr) minmax(15rem, 1fr) minmax(15rem, auto) minmax(10rem, auto);
+        grid-template-columns: minmax(15rem, 1fr) minmax(15rem, 1fr) minmax(15rem, auto) minmax(10rem, auto);
+  }
+  footer .logo-info {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    padding-top: 0;
+  }
+  footer .contacts, footer .footer-links, footer .social {
+    padding-top: 5.625rem;
+  }
+  footer .contacts {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  footer .footer-links {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  footer .social {
+    justify-self: flex-end;
+  }
 }
 
 @media (max-width: 575px) {
+  header {
+    padding: 1.5rem 0;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+  .logo img {
+    width: 80px;
+  }
   h2 {
     font-size: 1.25rem;
     margin-bottom: 1.25rem;

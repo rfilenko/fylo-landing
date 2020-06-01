@@ -21,9 +21,9 @@
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 3rem;
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
   }
@@ -35,12 +35,14 @@
     align-self: flex-start;
     margin-bottom: 2rem;
   }
-  p {
+  div {
     display: flex;
-    align-items: center;
-    svg {
-      margin-right: 1rem;
-    }
+  }
+  span {
+  padding-top: .5rem;
+  }
+  svg {
+    margin-right: 1rem;
   }
 }
 

@@ -19,6 +19,7 @@
     height: 30em;
     background-image: url(../imgs/bg-curvy-desktop.svg);
     z-index: -1;
+    background-size: contain;
   }
   .grid {
     grid-template-columns: repeat(2, minmax(10em, 1fr));
@@ -49,6 +50,9 @@
     }
     .logo-info {
       grid-column: 1 / span 2;
+      p {
+        margin-bottom: 0;
+      }
     }
     .contacts {
       grid-column: 3;
@@ -70,8 +74,23 @@
     }
   }
 }
+
 // small desktop
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
+  .features::before {
+    top: -55vh;
+    background-position-x: 55%;
+    min-height: 40em;
+    background-size: cover;
+  }
+  .grid {
+    gap: 4rem 0rem;  
+  }
+  .about {
+    .grid {
+      gap: 6rem;  
+    }
+  }
   .testimonials {
     .container {
       padding: 0 2rem;
@@ -81,9 +100,60 @@
       gap: 2rem;
     }
   }
+  footer {
+    .footer-links {
+      grid-row: 2;
+      grid-column: 1 / span 2;
+      nav {
+        justify-content: space-between;
+      }
+    }
+  }
 }
+
+// desktop
+@media (min-width: 1200px) {
+  .container {
+    padding: 0;
+  }
+  footer {
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      grid-template-columns: minmax(15rem, 1fr) minmax(15rem, 1fr) minmax(15rem, auto) minmax(10rem, auto);
+    }
+     .logo-info {
+      grid-column: 1;
+      padding-top: 0;
+    }
+    .contacts, .footer-links,.social   {
+      padding-top: 5.625rem;
+    }
+    .contacts {
+      grid-column: 2;
+      justify-self: center;
+    }
+    .footer-links {
+      grid-column: 3;
+      grid-row: 1;
+    }
+    .social {
+      justify-self: flex-end;
+    }
+  }
+}
+
 // mobile
 @media (max-width: 575px) {
+  header {
+    padding: 1.5rem 0;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+  .logo img {
+    width: 80px;
+  }
   h2 {
     font-size: 1.25rem;
     margin-bottom: 1.25rem;
