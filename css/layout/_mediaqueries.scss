@@ -55,7 +55,7 @@
       }
     }
     .contacts {
-      grid-column: 3;
+      grid-column: 1;
       margin: 0;
     }
     .footer-links {
@@ -120,7 +120,7 @@
     .footer-grid {
       max-width: 1200px;
       margin: 0 auto;
-      grid-template-columns: minmax(15rem, 1fr) minmax(15rem, 1fr) minmax(15rem, auto) minmax(10rem, auto);
+      grid-template-columns: minmax(18rem, 1fr) minmax(10rem, 1fr) minmax(15em, auto) minmax(10rem, auto);
     }
      .logo-info {
       grid-column: 1;
