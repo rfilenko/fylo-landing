@@ -1,5 +1,3 @@
-@import '../config/variables';
-
 /* header */
 header {
   background: var(--intro-bg-clr);
@@ -23,8 +21,8 @@ header {
 }
 .header-scrolled {
   position: fixed;
-  background: var(--white-clr);
   width: 100%;
+  background: var(--white-clr);
   padding: 0;
   box-shadow: 1px 1px 18px 0px hsla(218, 28%, 13%, 0.15);
   a {
