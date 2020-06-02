@@ -1,6 +1,8 @@
 /* header */
 header {
-  background: var(--intro-bg-clr);
+  position: fixed;
+  width: 100%;
+  top: 0;
   padding: 2.5rem 0;
   z-index: 20;
   transition: all 250ms ease-in;
@@ -20,8 +22,6 @@ header {
   }
 }
 .header-scrolled {
-  position: fixed;
-  width: 100%;
   background: var(--white-clr);
   padding: 0;
   box-shadow: 1px 1px 18px 0px hsla(218, 28%, 13%, 0.15);

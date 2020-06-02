@@ -5,9 +5,17 @@ const sectionOne = document.querySelector(".intro");
 const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
 
-const sectionOneOptions = {
-  rootMargin: "100px 0px 0px 0px"
+let offset, rMargin, sectionOneOptions;
+if (window.outerWidth < 475) { //mobile
+  offset = "-700px"
+} else {
+  offset = "-850px";
+}
+rMargin = `${offset} 0px 0px 0px`;
+sectionOneOptions = {
+  rootMargin: rMargin
 };
+
 const sectionOneObserver = new IntersectionObserver(function (entries, sectionOneObserver) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
@@ -41,7 +49,7 @@ const appearOnScroll = new IntersectionObserver(function (
   appearOptions);
 
 //only on mobile
-if (window.outerWidth < 450) {
+if (window.outerWidth < 475) {
   faders.forEach(fader => {
     appearOnScroll.observe(fader);
   });
