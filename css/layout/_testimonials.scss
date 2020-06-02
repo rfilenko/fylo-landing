@@ -38,12 +38,11 @@
       border-radius: 100%;
     }
     cite {
+      display: block;
       flex-basis: 100%;
-      h3, p {
-        font-size: .85rem;
-        font-style: normal;
-        margin-bottom: 0;
-      }
+      font-size: .85rem;
+      font-style: normal;
+      margin-bottom: 0;
     }
     > div {
       padding-left: 1rem;

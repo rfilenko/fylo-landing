@@ -13,17 +13,15 @@
     line-height: 1.7;
   }
   .features::before {
-    top: -27vh;
+    top: -24vh;
     height: 30em;
     background-image: url(../imgs/bg-curvy-desktop.svg);
     z-index: -1;
     background-size: contain;
   }
-  .about {
-    .grid {
-      > div {
-        align-self: center;
-      }
+  .grid {
+    article {
+      align-self: center;
     }
     .section__title {
       max-width: 20ch;
@@ -172,7 +170,6 @@
     width: 80px;
   }
   h2 {
-    font-size: 1.25rem;
     margin-bottom: 1.25rem;
   }
   .subtitle {
