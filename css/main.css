@@ -57,10 +57,46 @@ h2 {
   font-family: var(--ff-heading);
 }
 
+@media (max-width: 39.9375em) {
+  h2 {
+    margin-bottom: 1.25rem;
+  }
+}
+
 p, blockquote {
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+}
+
+.title {
+  font-weight: var(--fw-semiBold);
+  font-family: var(--ff-heading);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-heading);
+}
+
+@media (max-width: 39.9375em) {
+  .subtitle {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+}
+
+form {
+  width: 100%;
+}
+
+label[for="email"] {
+  display: none;
 }
 
 .flex {
@@ -120,6 +156,12 @@ ul {
   padding: 0 2rem;
 }
 
+@media (max-width: 39.9375em) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 /* grid */
 .grid {
   display: -ms-grid;
@@ -165,6 +207,12 @@ header {
   transition: all 250ms ease-in;
 }
 
+@media (max-width: 39.9375em) {
+  header {
+    padding: 1.5rem 0;
+  }
+}
+
 header .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -208,6 +256,12 @@ header a:hover, header a:focus {
 
 .logo img {
   width: 120px;
+}
+
+@media (max-width: 39.9375em) {
+  .logo img {
+    width: 80px;
+  }
 }
 
 nav ul {
@@ -260,28 +314,13 @@ nav a:hover:after {
   margin: 0 auto;
 }
 
-.intro img {
-  margin-bottom: 2rem;
-  z-index: 10;
-}
-
 .intro__text {
   z-index: 10;
 }
 
-.title {
-  font-weight: var(--fw-semiBold);
-  font-family: var(--ff-heading);
+.intro img {
   margin-bottom: 2rem;
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-
-.subtitle {
-  margin-bottom: 2rem;
-  line-height: 1.5;
-  font-weight: var(--fw-regular);
-  font-family: var(--ff-heading);
+  z-index: 10;
 }
 
 /* about section */
@@ -488,12 +527,22 @@ nav a:hover:after {
   padding: 3rem 1.5rem;
 }
 
-form {
-  width: 100%;
+.sign-in__title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-label[for="email"] {
-  display: none;
+@media (max-width: 39.9375em) {
+  .sign-in__text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.sign-in .btn {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .sign-in input {
@@ -501,17 +550,6 @@ label[for="email"] {
   padding: 1rem 1.75rem;
   border-radius: 2rem;
   margin-bottom: 1.5rem;
-}
-
-.sign-in__title {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.sign-in .btn {
-  width: 100%;
-  font-size: 1rem;
-  font-weight: 700;
 }
 
 /* footer */
@@ -872,29 +910,6 @@ svg {
   }
   footer .social {
     justify-self: flex-end;
-  }
-}
-
-@media (max-width: 575px) {
-  header {
-    padding: 1.5rem 0;
-  }
-  .container {
-    padding: 0 1rem;
-  }
-  .logo img {
-    width: 80px;
-  }
-  h2 {
-    margin-bottom: 1.25rem;
-  }
-  .subtitle {
-    font-size: 1.05rem;
-    line-height: 1.6;
-  }
-  .sign-in__text {
-    text-align: center;
-    margin-bottom: 2rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

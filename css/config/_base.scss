@@ -35,13 +35,42 @@ h2 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   font-family:var(--ff-heading);
+  @include breakpoint-down(small) {
+    margin-bottom: 1.25rem;
+  }  
 }
 p, blockquote {
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
+.title {
+  font-weight: var(--fw-semiBold);
+  font-family: var(--ff-heading);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.subtitle {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-heading);
+  @include breakpoint-down(small) {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  } 
+}
 
+// form
+form {
+  width: 100%;
+}
+label[for="email"] {
+  display: none;
+}
+
+// Flexbox
 .flex {
    display: flex;
 }
@@ -81,7 +110,12 @@ ul {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 2rem;
+
+  @include breakpoint-down(small) {
+     padding: 0 1rem;
+  }
 }
+
 /* grid */
 .grid {
   display: grid;

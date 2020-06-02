@@ -6,7 +6,7 @@ const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
 
 let offset, rMargin, sectionOneOptions;
-if (window.outerWidth < 475) { //mobile
+if (window.innerWidth < 475) { //mobile
   offset = "-700px"
 } else {
   offset = "-850px";

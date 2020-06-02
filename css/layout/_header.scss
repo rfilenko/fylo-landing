@@ -7,6 +7,9 @@ header {
   z-index: 20;
   transition: all 250ms ease-in;
 
+ @include breakpoint-down(small) {
+    padding: 1.5rem 0;
+  }
   .container  {
     display: flex;
     justify-content: space-between;
@@ -40,6 +43,9 @@ header {
 
 .logo img {
   width: 120px;
+  @include breakpoint-down(small) {
+    width: 80px;
+  }
 }
 nav {
   ul {

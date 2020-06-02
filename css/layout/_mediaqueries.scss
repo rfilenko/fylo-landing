@@ -154,27 +154,3 @@
     }
   }
 }
-
-// mobile
-@media (max-width: 575px) {
-  header {
-    padding: 1.5rem 0;
-  }
-  .container {
-    padding: 0 1rem;
-  }
-  .logo img {
-    width: 80px;
-  }
-  h2 {
-    margin-bottom: 1.25rem;
-  }
-  .subtitle {
-    font-size: 1.05rem;
-    line-height: 1.6;
-  }
-  .sign-in__text {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-}
