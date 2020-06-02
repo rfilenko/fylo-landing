@@ -130,24 +130,25 @@ ul {
   border: none;
   cursor: pointer;
   display: inline-block;
+  white-space: nowrap;
   width: 90%;
-  background: -webkit-gradient(linear, left top, right top, from(var(--cyan-clr)), to(var(--blue-clr)));
-  background: linear-gradient(90deg, var(--cyan-clr), var(--blue-clr));
+  background-image: linear-gradient(60deg, var(--cyan-clr), var(--blue-clr));
   padding: 1rem 1.75rem;
   border-radius: 2rem;
   color: var(--white-clr);
   font-size: 1.25rem;
   -webkit-box-shadow: 4px 6px 17px -4px rgba(0, 0, 0, 0.15);
           box-shadow: 4px 6px 17px -4px rgba(0, 0, 0, 0.15);
-  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
 }
 
 .btn:hover, .btn:focus {
   -webkit-box-shadow: 4px 6px 22px -4px rgba(0, 0, 0, 0.35);
           box-shadow: 4px 6px 22px -4px rgba(0, 0, 0, 0.35);
-  background: -webkit-gradient(linear, left bottom, left top, from(var(--blue-clr)), to(var(--cyan-clr)));
-  background: linear-gradient(0deg, var(--blue-clr), var(--cyan-clr));
+  background-image: linear-gradient(125deg, var(--blue-clr), var(--cyan-clr));
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: var(--white-clr);
 }
 
 /* header */
